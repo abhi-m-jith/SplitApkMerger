@@ -72,8 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
       setState(() {
         TheState=ProgramState.Processing;
       });
-      // Replace 'path/to/input' and 'path/to/out.txt' with your actual paths
-      //String inputPath = 'C:/Users/USER/Downloads/apkm/yt.apkm';
+      
 
 
       // Build the command
@@ -82,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // Run the command
       Process result = await Process.start(command,[], runInShell: true);
 
-      //ProcessResult result=results[0];
+      
 // Listen to the standard output stream
       result.stdout.transform(utf8.decoder).listen((data) {
         _outputController.add(data); // Update the output text
